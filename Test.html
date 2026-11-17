@@ -1,0 +1,20 @@
+// Source - https://stackoverflow.com/a/32273652
+// Posted by Juan Girini
+// Retrieved 2026-11-17, License - CC BY-SA 3.0
+
+<script type="text/javascript">
+  window.onload = function() { init() };
+
+  var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1olKfs4KIH8tK1hFaMACSdM-U56CXdzwALbLo8QC-l4c/edit?gid=1945707999#gid=1945707999&range=M:M';
+
+  function init() {
+    Tabletop.init( { key: public_spreadsheet_url,
+                     callback: showInfo,
+                     simpleSheet: true } )
+  }
+
+  function showInfo(data, tabletop) {
+    alert("Successfully processed!")
+    console.log(data);
+  }
+</script>
